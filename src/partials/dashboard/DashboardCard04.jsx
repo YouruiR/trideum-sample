@@ -33,7 +33,7 @@ function DashboardCard04(props) {
       </header>
       {/* Chart built with Chart.js 3 */}
       {/* Change the height attribute to adjust the chart height */}
-      <BarChart data={chartData} width={595} height={248} setActiveClusterIndex={setActiveClusterIndex} authUserID={authUserID} />
+      <BarChart data={chartData} width={595} height={248} setActiveClusterIndex={setActiveClusterIndex} authUserID={authUserID} queryResponse={queryResponse}/>
     </div>
   );
 }

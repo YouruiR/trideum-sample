@@ -27,6 +27,10 @@ export const getGraphData = (data, clusterIndex) => {
     edges: [],
   }
 
+  if (data === undefined || clusterIndex === null) {
+    return graphData;
+  }
+  
   for (const node of data[clusterIndex].nodes) {
     graphData.nodes.push({
       id: node.id,

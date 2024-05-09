@@ -18,6 +18,7 @@ function BarChart01({
   height,
   setActiveClusterIndex,
   authUserID,
+  queryResponse,
 }) {
 
   const [chart, setChart] = useState(null)
@@ -37,7 +38,7 @@ function BarChart01({
         onClick: (event) => {
           const points = newChart.getElementsAtEventForMode(event, 'nearest', {intersect: true}, true);
           const state = {
-            data: data,
+            data: queryResponse,
             activeIndex: points[0].index, 
           };
           const stateJSON = JSON.stringify(state)
