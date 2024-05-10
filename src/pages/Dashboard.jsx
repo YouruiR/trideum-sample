@@ -73,18 +73,15 @@ function Dashboard() {
             <div className="grid grid-cols-12 gap-6">
 
               <DashboardCard08 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
-              <DashboardCard09 />
+              <DashboardCard13 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
               <DashboardCard05 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
               <DashboardCard04 setActiveClusterIndex={setActiveClusterIndex} activeClusterIndex={activeClusterIndex} authUserID={authUserID} queryResponse={queryResponse}/>
               <DashboardCard12 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
-              <DashboardCard13 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
+              <DashboardCard09 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
             </div>
 
           </div>
         </main>
-
-        <Banner />
-
       </div>
     </div>
   );

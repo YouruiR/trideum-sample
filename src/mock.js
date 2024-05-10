@@ -35,7 +35,7 @@ const mockData = [
             { source: 2, target: 4},
             { source: 1, target: 4},
         ],
-        clusterSummary: 'lorem ipsum...',
+        clusterSummary: 'These files are best associated with marketing or business development. Key information you might be interested in this set of documents include ....',
         similar: {
             authors: ['author1', 'author2', 'author3'],
             themes: ['planes', 'trains']
@@ -75,7 +75,7 @@ const mockData = [
             {source: 6, target: 7},
             {source: 7, target: 8},
         ],
-        clusterSummary: 'second lorem ipsum...',
+        clusterSummary: 'These files are best associated with marketing or business development. Key information you might be interested in this set of documents include ....',
         similar: {
             authors: ['author3', 'author4', 'author5'],
             themes: ['vans', 'cars']
@@ -116,7 +116,7 @@ const mockData = [
             {source: 11, target: 12},
             {source: 9, target: 11},
         ],
-        clusterSummary: 'third lorem ipsum...',
+        clusterSummary: 'These files are best associated with marketing or business development. Key information you might be interested in this set of documents include ....',
         similar: {
             authors: ['author5', 'author6', 'author7'],
             themes: ['boats', 'ships']

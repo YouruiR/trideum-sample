@@ -48,7 +48,7 @@ function WelcomeBanner() {
       {/* Content */}
       <div className="relative">
         <h1 className="text-2xl md:text-3xl text-slate-800 dark:text-slate-100 font-bold mb-1">Hello, Trideum 👋</h1>
-        <p className="dark:text-indigo-200">Here's a sample UI</p>
+        <p className="dark:text-indigo-200">Here's a sample UI. Click a cluster on the bar chart to get started.</p>
       </div>
     </div>
   );
