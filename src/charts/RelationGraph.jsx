@@ -1,15 +1,14 @@
 import React from 'react';
 import { ForceGraph2D } from 'react-force-graph';
-import './relationgraph.css';
 
 const RelationGraph = ({ data, width, height }) => {
     const graph = {
         nodes: data.nodes,
         links: data.edges,
     }
-
+    console.log(graph.links)
     return (
-        <div className="grow overflow-hidden" id='grow-container'>
+        <div className="grow overflow-hidden">
             <ForceGraph2D 
                 graphData={graph} 
                 width={width} 
@@ -21,7 +20,7 @@ const RelationGraph = ({ data, width, height }) => {
                     ctx.font = `${fontSize}px Sans-Serif`;
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'middle';
-                    ctx.fillStyle = 'black'; // Color of the label
+                    ctx.fillStyle = 'black';
                     ctx.fillText(label, node.x, node.y + 10);
                 }}
                 nodeCanvasObjectMode={() => 'before'}

@@ -17,6 +17,12 @@ function Dashboard() {
 
   let lastState;
 
+  
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [queryResponse, setQueryResponse] = useState(mockData)
+  const [activeClusterIndex, setActiveClusterIndex] = useState(1);
+  const [authUserID, setAuthUserID] = useState('user1');
+  
   /*
   If the last session state exists in local storage, use that instead of empty state
   */
@@ -28,12 +34,7 @@ function Dashboard() {
       setActiveClusterIndex(lastState.activeIndex);
     }
   }, [])
-
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [queryResponse, setQueryResponse] = useState(mockData)
-  const [activeClusterIndex, setActiveClusterIndex] = useState(null);
-  const [authUserID, setAuthUserID] = useState('user1');
-
+  
   return (
     <div className="flex h-screen overflow-hidden">
 
