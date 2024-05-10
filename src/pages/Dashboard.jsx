@@ -11,7 +11,6 @@ import DashboardCard08 from '../partials/dashboard/DashboardCard08';
 import DashboardCard09 from '../partials/dashboard/DashboardCard09';
 import DashboardCard12 from '../partials/dashboard/DashboardCard12';
 import DashboardCard13 from '../partials/dashboard/DashboardCard13';
-import Banner from '../partials/Banner';
 import mockData from '../mock';
 
 function Dashboard() {
@@ -79,7 +78,6 @@ function Dashboard() {
               <DashboardCard12 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
               <DashboardCard09 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
             </div>
-
           </div>
         </main>
       </div>
