@@ -26,28 +26,67 @@ export const getGraphData = (data, clusterIndex) => {
     nodes: [],
     edges: [],
   }
-
   if (data === undefined || clusterIndex === null) {
     return graphData;
   }
-
   for (const node of data[clusterIndex].nodes) {
     graphData.nodes.push({
       id: node.id,
-      author: node.authors,
+      authors: node.authors,
       label: node.label,
       title: node.title,
     });
   }
-
   graphData.edges = data[clusterIndex].edges;
   return graphData;
 }
 
 export const getAuthorGraphData = (data, clusterIndex) => {
-  const graphData = {
-    nodes: [],
+  let graphData = {
+    authorNodes: [],
+    documentNodes: [],
     edges: [],
+  }
+
+  if (data === undefined || clusterIndex === null) {
+    return graphData;
+  }
+
+  const authorSet = new Set();
+  const documentSet = new Set();
+  data[clusterIndex].nodes.forEach(node => {
+    node.authors.forEach(author => {
+      authorSet.add(author);
+    });
+    documentSet.add(node.id);
+  });
+
+  const authorNodes = Array.from(authorSet).map(author => ({
+    id: author,
+    label: author,
+    type: 'author'
+  }));
+
+  const documentNodes = Array.from(documentSet).map(documentId => {
+    const document = data[clusterIndex].nodes.find(node => node.id === documentId);
+    return {
+      id: document.id,
+      label: document.title,
+      type: 'document'
+    };
+  });
+
+  const edges = [];
+  data[clusterIndex].nodes.forEach(node => {
+    node.authors.forEach(author => {
+      edges.push({ source: author, target: node.id });
+    });
+  });
+
+  graphData = {
+    authorNodes,
+    documentNodes,
+    edges
   }
 
   return graphData;

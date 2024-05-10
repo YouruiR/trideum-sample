@@ -90,9 +90,9 @@ function Dashboard() {
               {/* Line chart (Acme Plus) */}
               <DashboardCard08 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
               {/* Line chart (Acme Advanced) */}
-              <DashboardCard09 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
+              <DashboardCard09 />
               {/* Line chart (Acme Professional) */}
-              <DashboardCard10 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
+              <DashboardCard05 queryResponse={queryResponse} activeClusterIndex={activeClusterIndex}/>
               {/* Bar chart (Clusters) */}
               <DashboardCard04 setActiveClusterIndex={setActiveClusterIndex} activeClusterIndex={activeClusterIndex} authUserID={authUserID} queryResponse={queryResponse}/>
               {/* Card (Recent Activity) */}

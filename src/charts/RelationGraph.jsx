@@ -1,6 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-// import ReactDOM from 'react-dom';
-// import Graph from 'react-graph-vis';
+import React from 'react';
 import { ForceGraph2D } from 'react-force-graph';
 import './relationgraph.css';
 
