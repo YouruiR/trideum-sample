@@ -29,11 +29,11 @@ const mockData = [
             }
         ],
         edges: [
-            { from: 1, to: 2},
-            { from: 2, to: 3},
-            { from: 3, to: 1},
-            { from: 2, to: 4},
-            { from: 1, to: 4},
+            { source: 1, target: 2},
+            { source: 2, target: 3},
+            { source: 3, target: 1},
+            { source: 2, target: 4},
+            { source: 1, target: 4},
         ],
         clusterSummary: 'lorem ipsum...',
         similar: {
@@ -71,9 +71,9 @@ const mockData = [
             }
         ],
         edges: [
-            {from: 5, to: 6},
-            {from: 6, to: 7},
-            {from: 7, to: 8},
+            {source: 5, target: 6},
+            {source: 6, target: 7},
+            {source: 7, target: 8},
         ],
         clusterSummary: 'second lorem ipsum...',
         similar: {
@@ -111,10 +111,10 @@ const mockData = [
             }
         ],
         edges: [
-            {from: 9, to: 10},
-            {from: 10, to: 12},
-            {from: 12, to: 10},
-            {from: 9, to: 11},
+            {source: 9, target: 10},
+            {source: 10, target: 11},
+            {source: 11, target: 12},
+            {source: 9, target: 11},
         ],
         clusterSummary: 'third lorem ipsum...',
         similar: {

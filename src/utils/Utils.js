@@ -30,10 +30,11 @@ export const getGraphData = (data, clusterIndex) => {
   if (data === undefined || clusterIndex === null) {
     return graphData;
   }
-  
+
   for (const node of data[clusterIndex].nodes) {
     graphData.nodes.push({
       id: node.id,
+      author: node.authors,
       label: node.label,
       title: node.title,
     });

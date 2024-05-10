@@ -1,38 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect, useRef } from 'react';
+// import ReactDOM from 'react-dom';
 // import Graph from 'react-graph-vis';
+import { ForceGraph2D } from 'react-force-graph';
+import './relationgraph.css';
 
 const RelationGraph = ({ data, width, height }) => {
     const graph = {
         nodes: data.nodes,
-        edges: data.edges,
+        links: data.edges,
     }
 
-    const options = {
-        layout: {
-            hierarchical: true
-        },
-        edges: {
-            color: "#000000"
-        },
-        height: "500px"
-    };
-    
-    const events = {
-        select: function(event) {
-            var { nodes, edges } = event;
-        }
-    };
-
     return (
-        <div>
-
+        <div className="grow overflow-hidden" id='grow-container'>
+            <ForceGraph2D 
+                graphData={graph} 
+                width={width} 
+                height={height} 
+                backgroundColor='white'
+                nodeCanvasObject={(node, ctx, globalScale) => {
+                    const label = node.label || '';
+                    const fontSize = 12 / globalScale;
+                    ctx.font = `${fontSize}px Sans-Serif`;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillStyle = 'black'; // Color of the label
+                    ctx.fillText(label, node.x, node.y + 10);
+                }}
+                nodeCanvasObjectMode={() => 'before'}
+            /> 
         </div>
-        // <Graph
-        //     graph={graph}
-        //     options={options}
-        //     events={events}
-        // />
     );
 }
 
