@@ -6,7 +6,7 @@ const RelationGraph = ({ data, width, height }) => {
         nodes: data.nodes,
         links: data.edges,
     }
-    console.log(graph.links)
+    
     return (
         <div className="grow overflow-hidden">
             <ForceGraph2D 
