@@ -2,6 +2,8 @@
 
 <p align="center">Sample UI for Trideum</p>
 
+![](./src/images/Dashboard.png)
+
 ## Table of Contents
 
 1. [Description](#description)
